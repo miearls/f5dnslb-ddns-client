@@ -1,0 +1,18 @@
+f5cs_username: ""
+f5cs_password: ""
+
+service_instance_name: "Delegate Zone Name"
+lbr_name: "Load Balance Record Name"
+lbr_aliases: "Any Aliases"
+virtual_servers: "Virtual Server Name"
+pools: "Pool Name"
+monitors: "ICMP"
+
+checkInterval: 60 #seconds
+
+ip_query:
+  - "https://api.ipify.org"
+  - "https://ifconfig.io/ip"
+  - "https://ident.me/"
+  - "https://ifconfig.me/ip"
+  - "https://icanhazip.com/"
