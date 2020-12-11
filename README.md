@@ -1,7 +1,18 @@
 # F5 DNS Load Balancer Dynamic DNS Client 
-Ever wanted to access your home network or someone's network but they have a dynmaic ip that changes all the time. This script is for you, it makes use of a FREE service from F5.com (http://portal.cloudservices.f5.com) DNS Load Balancer. Using the FREE tier 1 LBR, load balanced record, and up to 3M DNS queries per month. 
+Ever wanted to access your home network or someone's network but they have a dynmaic IP that changes all the time. This script is for you, it makes use of a FREE service from F5.com (https://clouddocs.f5.com/cloud-services/latest/f5-cloud-services-GSLB-WorkWith.html#work-with-the-f5-dns-load-balancer-service) DNS Load Balancer. Information about the FREE tier is listed below.
 
-This script written in Python is using the F5 DNS-LB API call to generate a new json configuration including LBRs, Virtual Servers, Endpoints, Pools and Monitors and updates the endpoint IP address based on the outbound HTTP call to a 3rd party serivce to provide the external IP address. 
+This script written in Python is using the F5 DNS-LB API call to generate a new json configuration including LBRs, Virtual Servers, Endpoints, Pools and Monitors and updates the endpoint IP address based on the outbound HTTP call to a 3rd party serivce to provide the external IP address of your nextwork. This will not pull the internal IP of your device. 
+
+Sign up for a FREE Account, no credit card required. 
+https://portal.cloudservices.f5.com/register
+
+F5 Cloud Free Tier information:
+A Free Tier is applied to all users but is most useful to those who wish to try the service without incurring any charges. If usage is kept below the tier thresholds, no charges will be billed. Any usage beyond the free tier is charged at the normal rates. The free tier allows for:
+
+One free Load Balanced Record (LBR) per month.
+First 3 million queries per month are free.
+First 10 standard health checks are free. These may span LBRs or service instances.
+https://clouddocs.f5.com/cloud-services/latest/f5-cloud-services-GSLB-Pricing.html#f5-dns-load-balancer-cloud-service-pricing
 
 ## Example
 1. Clone the repo and change to the directory
