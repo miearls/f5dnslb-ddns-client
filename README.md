@@ -1,6 +1,9 @@
 # F5 DNS Load Balancer Dynamic DNS Client 
 Ever wanted to access your home network or someone's network but they have a dynmaic IP that changes all the time. This script is for you, it makes use of a FREE service from F5.com DNS Load Balancer. Information about the FREE tier is listed below.
 
+<img src="https://raw.githubusercontent.com/miearls/f5dnslb-ddns-client/master/img/virtual_server.png" width="600">
+
+
 This script written in Python is using the F5 DNS-LB API call to generate a new json configuration including LBRs, Virtual Servers, Endpoints, Pools and Monitors and updates the endpoint IP address based on the outbound HTTP call to a 3rd party serivce to provide the external IP address of your nextwork. This will not pull the internal IP of your device. 
 
 Sign up for a FREE Account, no credit card required. 
