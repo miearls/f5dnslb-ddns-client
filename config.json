@@ -1,0 +1,63 @@
+{            "account_id": self.primary_account_id,
+            "catalog_id": "c-aaQnOrPjGu",
+            "service_type": "gslb",
+            "service_instance_name": my_service_instance_name,
+            "configuration": {
+                "gslb_service": {
+                    "load_balanced_records": {
+                        my_lbr_name: {
+                            "aliases": [
+                                my_lbr_aliases
+                            ],
+                            "display_name": my_lbr_name,
+                            "enable": True,
+                            "persist_cidr_ipv4": 24,
+                            "persist_cidr_ipv6": 56,
+                            "persistence": True,
+                            "persistence_ttl": 3600,
+                            "proximity_rules": [
+                                {
+                                    "pool": my_pools,
+                                    "region": "global",
+                                    "score": 1
+                                }
+                            ],
+                            "rr_type": "A"
+                        }
+                    },
+                    "monitors": {
+                        my_monitors: {
+                            "display_name": my_pools,
+                            "monitor_type": "icmp_standard",
+                            "remark": "Ping Check"
+                        }
+                    },
+                    "pools": {
+                        my_pools: {
+                            "display_name": my_pools,
+                            "enable": True,
+                            "load_balancing_mode": "static-persist",
+                            "max_answers": 1,
+                            "members": [
+                                {
+                                    "virtual_server": my_virtual_servers,
+                                    "monitor": "basic"
+                                }
+                            ],
+                            "remark": "",
+                            "rr_type": "A",
+                            "ttl": 30,
+                        }
+                    },
+                    "virtual_servers": {
+                        my_virtual_servers: {
+                            "address": newIPAddress,
+                            "display_name": my_virtual_servers,
+                            "monitor": my_monitors,
+                            "port": 80,
+                            "virtual_server_type": "cloud"
+                        }
+                    }, "zone": my_service_instance_name
+                }
+            }
+        }
