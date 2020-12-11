@@ -42,7 +42,7 @@ End-Point IP Address:
 <img src="https://raw.githubusercontent.com/miearls/f5dnslb-ddns-client/master/img/virtual_server.png" width="600">
 
 As you can see an example of the inital json payload (my current IP) and the updated payload (Net New IP) with the new changes.
-'''
+''' json
 {'VSisp': {'address': '**122.29.27.51**', 'display_name': 'VSisp', 'monitor': 'ICMP', 'port': 80, 'virtual_server_type': 'cloud'}}, 
 24 Hours later:
  {'VSisp': {'address': '**24.32.18.21**', 'display_name': 'VSisp', 'monitor': 'ICMP', 'port': 80, 'virtual_server_type': 'cloud'}}, 
