@@ -32,7 +32,6 @@ https://clouddocs.f5.com/cloud-services/latest/f5-cloud-services-GSLB-Pricing.ht
    * **check interval**: How often should the script run and check your external IP.
    * **ip query service**: Which external provider 
 
-Configuration Created:
 <img src="https://raw.githubusercontent.com/miearls/f5dnslb-ddns-client/master/img/LBR_created.png" width="600">
 
 As you can see an example of the inital json payload (my current IP) and the updated payload (Net New IP) with the new changes.
